@@ -1,12 +1,17 @@
-# leet-code-problems
+# Leet Code Problems
 
-1. Two Sum
-9. Palindrome Number
-13. Roman to Integer
-14. Longest Common Prefix
-20. Valid Parentheses
-21. Merge Two Sorted Lists
-26. Remove Duplicates from Sorted Array
-27. Remove Element
-28. Find the Index of the First Occurence in a String
-35. Search Insert Position
+- ## Easy ##
+  - ### Numbers ###
+    - Two Sum <sup>[1]</sup>
+    - Palindrome Number <sup>[9]</sup>
+    - Roman to Integer <sup>[13]</sup>
+  - ### Strings ###
+    - Longest Common Prefix <sup>[14]</sup>
+    - Valid Parentheses <sup>[20]</sup>
+    - Find the Index of the First Occurence in a String <sup>[28]</sup>
+  - ### Linked Lists ###
+    - Merge Two Sorted Lists <sup>[21]</sup>
+  - ### Arrays ###
+    - Remove Duplicates from Sorted Array <sup>[26]</sup>
+    - Remove Element <sup>[27]</sup>
+    - Search Insert Position <sup>[35]</sup>
