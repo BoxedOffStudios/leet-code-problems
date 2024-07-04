@@ -9,6 +9,7 @@
     - Longest Common Prefix <sup>[14]</sup>
     - Valid Parentheses <sup>[20]</sup>
     - Find the Index of the First Occurence in a String <sup>[28]</sup>
+    - Length of Last Word <sup>[58]</sup>
   - ### Linked Lists ###
     - Merge Two Sorted Lists <sup>[21]</sup>
   - ### Arrays ###
