@@ -6,6 +6,7 @@
     - Palindrome Number <sup>[9]</sup>
     - Roman to Integer <sup>[13]</sup>
     - Plus One <sup>[66]</sup>
+    - Add Binary <sup>[67]</sup>
   - ### Strings ###
     - Longest Common Prefix <sup>[14]</sup>
     - Valid Parentheses <sup>[20]</sup>
