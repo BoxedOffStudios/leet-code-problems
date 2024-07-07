@@ -16,6 +16,7 @@
     - Length of Last Word <sup>[58]</sup>
   - ### Linked Lists ###
     - Merge Two Sorted Lists <sup>[21]</sup>
+    - Remove Duplicates from Sorted Lists <sup>[83]</sup>
   - ### Arrays ###
     - Remove Duplicates from Sorted Array <sup>[26]</sup>
     - Remove Element <sup>[27]</sup>
