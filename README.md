@@ -21,3 +21,4 @@
     - Remove Duplicates from Sorted Array <sup>[26]</sup>
     - Remove Element <sup>[27]</sup>
     - Search Insert Position <sup>[35]</sup>
+    - Merge Sorted Array <sup>[88]</sup>
