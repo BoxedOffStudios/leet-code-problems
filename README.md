@@ -22,3 +22,5 @@
     - Remove Element <sup>[27]</sup>
     - Search Insert Position <sup>[35]</sup>
     - Merge Sorted Array <sup>[88]</sup>
+  - ### Binary Trees ###
+    - Binary Tree Inorder Traversal <sup>[94]</sup>
