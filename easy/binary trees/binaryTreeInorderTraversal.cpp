@@ -74,11 +74,11 @@ std::vector<int> inorderTraversal(TreeNode* p_rootNode)
 
 int main(void)
 {
-    TreeNode p_nodeOneThree(1);
-    TreeNode p_nodeOneTwo(3, &p_nodeOneThree, nullptr);
-    TreeNode p_nodeOneOne(2, &p_nodeOneTwo, nullptr);
+    TreeNode nodeOneThree(1);
+    TreeNode nodeOneTwo(3, &nodeOneThree, nullptr);
+    TreeNode nodeOneOne(2, &nodeOneTwo, nullptr);
 
-    std::vector<int> traversalOne = inorderTraversal(&p_nodeOneOne);
+    std::vector<int> traversalOne = inorderTraversal(&nodeOneOne);
 
     // prints values from first inorder traversal
     for (int value : traversalOne) {
@@ -96,9 +96,9 @@ int main(void)
 
     std::cout << "\n";
 
-    TreeNode p_nodeThreeThree(1);
+    TreeNode nodeThreeThree(1);
 
-    std::vector<int> traversalThree = inorderTraversal(&p_nodeThreeThree);
+    std::vector<int> traversalThree = inorderTraversal(&nodeThreeThree);
 
     // prints values from second inorder traversal
     for (int value : traversalThree) {
