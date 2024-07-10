@@ -25,3 +25,4 @@
   - ### Binary Trees ###
     - Binary Tree Inorder Traversal <sup>[94]</sup>
     - Same Tree <sup>[100]</sup>
+    - Symmetric Tree <sup>[101]</sup>
