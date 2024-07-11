@@ -7,8 +7,6 @@
  * 
  */
 
-#include <utility>
-#include <queue>
 #include <iostream>
 
 struct TreeNode
@@ -25,57 +23,22 @@ struct TreeNode
     TreeNode* rightNode;
 };
 
-bool isSameTree(TreeNode* p_firstRoot, TreeNode* p_secondRoot)
+bool isSameTree(TreeNode* p_leftTree, TreeNode* p_rightTree)
 {
-    using TreeNodePair = std::pair<TreeNode*, TreeNode*>;
-
-    auto isPairMatching = [](const TreeNodePair& p_treeNodePair) -> bool
-    {
-        // both are null - matching
-        if (p_treeNodePair.first == nullptr && p_treeNodePair.second == nullptr) {
-            return true;
-        }
-
-        // only one of the pair is null - NOT matching
-        if (p_treeNodePair.first == nullptr || p_treeNodePair.second == nullptr) {
-            return false;
-        }
-
-        return p_treeNodePair.first->value == p_treeNodePair.second->value;
-    };
-
-    std::queue<TreeNodePair> pairsToCheck;
-
-    // adds both left nodes and then both right nodes as two separate pairs
-    auto addChildrenToQueue = [&pairsToCheck](TreeNodePair p_parents) -> void
-    {
-        if (p_parents.first->leftNode != nullptr || p_parents.second->leftNode != nullptr) {
-            pairsToCheck.emplace(p_parents.first->leftNode, p_parents.second->leftNode);
-        }
-
-        if (p_parents.first->rightNode != nullptr || p_parents.second->rightNode != nullptr) {
-            pairsToCheck.emplace(p_parents.first->rightNode, p_parents.second->rightNode);
-        }
-    };
-    
-    // begins by adding the root parents to be checked
-    if (p_firstRoot != nullptr || p_secondRoot != nullptr) {
-        pairsToCheck.emplace(p_firstRoot, p_secondRoot);
+    if (p_leftTree == nullptr && p_rightTree == nullptr) {
+        return true;
     }
 
-    while (!pairsToCheck.empty()) {
-        TreeNodePair currentPair = pairsToCheck.front();
-        pairsToCheck.pop();
-
-        if (!isPairMatching(currentPair)) {
-            return false;
-        }
-
-        // pair is matching
-        addChildrenToQueue(currentPair);
+    if (p_leftTree == nullptr || p_rightTree == nullptr) {
+        return false;
     }
 
-    return true;
+    if (p_leftTree->value != p_rightTree->value) {
+        return false;
+    }
+
+    return (isSameTree(p_leftTree->leftNode, p_rightTree->leftNode) &&
+            isSameTree(p_leftTree->rightNode, p_rightTree->rightNode));
 }
 
 int main(void)
