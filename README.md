@@ -29,3 +29,4 @@
     - Maximum Depth of Binary Tree <sup>[104]</sup>
     - Convert Sorted Array to Binary Search Tree <sup>[108]</sup>
     - Balanced Binary Tree <sup>[110]</sup>
+    - Minimum Depth of Binary Tree <sup>[111]</sup>
