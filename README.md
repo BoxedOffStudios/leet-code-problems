@@ -11,6 +11,7 @@
     - Climbing Stairs <sup>[70]</sup>
     - Pascal's Triangle <sup>[118]</sup>
     - Pascal's Triangle II <sup>[119]</sup>
+    - Best Time to Buy and Sell Stock <sup>[121]</sup>
   - ### Strings ###
     - Longest Common Prefix <sup>[14]</sup>
     - Valid Parentheses <sup>[20]</sup>
