@@ -17,6 +17,7 @@
     - Valid Parentheses <sup>[20]</sup>
     - Find the Index of the First Occurence in a String <sup>[28]</sup>
     - Length of Last Word <sup>[58]</sup>
+    - Valid Palindrome <sup>[125]</sup>
   - ### Linked Lists ###
     - Merge Two Sorted Lists <sup>[21]</sup>
     - Remove Duplicates from Sorted Lists <sup>[83]</sup>
