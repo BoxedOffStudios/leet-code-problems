@@ -26,6 +26,7 @@
     - [Remove Element <sup>[27]</sup>](https://leetcode.com/problems/remove-element)
     - [Search Insert Position <sup>[35]</sup>](https://leetcode.com/problems/search-insert-position)
     - [Merge Sorted Array <sup>[88]</sup>](https://leetcode.com/problems/merge-sorted-array)
+    - [Single Number <sup>[136]</sup>](https://leetcode.com/problems/single-number)
   - ### Binary Trees ###
     - [Binary Tree Inorder Traversal <sup>[94]</sup>](https://leetcode.com/problems/binary-tree-inorder-traversal)
     - [Same Tree <sup>[100]</sup>](https://leetcode.com/problems/same-tree)
