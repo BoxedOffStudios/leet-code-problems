@@ -21,6 +21,7 @@
   - ### Linked Lists ###
     - [Merge Two Sorted Lists <sup>[21]</sup>](https://leetcode.com/problems/merge-two-sorted-lists)
     - [Remove Duplicates from Sorted Lists <sup>[83]</sup>](https://leetcode.com/problems/remove-duplicates-from-sorted-list)
+    - [Linked List Cycle <sup>[141]</sup>](https://leetcode.com/problems/linked-list-cycle)
   - ### Arrays ###
     - [Remove Duplicates from Sorted Array <sup>[26]</sup>](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
     - [Remove Element <sup>[27]</sup>](https://leetcode.com/problems/remove-element)
