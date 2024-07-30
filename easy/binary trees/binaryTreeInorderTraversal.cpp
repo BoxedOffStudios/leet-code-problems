@@ -5,10 +5,6 @@
  * 
  */
 
-#include <vector>
-#include <stack>
-#include <iostream>
-
 struct TreeNode
 {
     TreeNode()
@@ -23,87 +19,54 @@ struct TreeNode
     TreeNode* rightNode;
 };
 
+#include <vector>
+#include <iostream>
+
+void inorderTraversal(std::vector<int>& p_traversal, TreeNode* p_rootNode)
+{
+    if (!p_rootNode) {
+        return;
+    }
+
+    // adds current node after exploring left child but before exploring the right - INbetween
+    inorderTraversal(p_traversal, p_rootNode->leftNode);
+    p_traversal.push_back(p_rootNode->value);
+    inorderTraversal(p_traversal, p_rootNode->rightNode);
+}
+
 std::vector<int> inorderTraversal(TreeNode* p_rootNode)
 {
     std::vector<int> traversal;
-    std::stack<TreeNode*> nodesToTraverse;
-
-    // finished traversal if both children are null and there is nothing on the stack left to traverse
-    auto nodesRemaining = [&]() -> bool
-    {
-        return (p_rootNode->leftNode ||
-                p_rootNode->rightNode ||
-                nodesToTraverse.size() > 0);
-    };
-
-    while (p_rootNode && nodesRemaining()) {
-        TreeNode* leftNode = p_rootNode->leftNode;
-
-        // explores left node
-        if (leftNode) {
-            // ensures left node isn't searched again when traversing
-            p_rootNode->leftNode = nullptr;
-            nodesToTraverse.push(p_rootNode);
-
-            p_rootNode = leftNode;
-            continue;
-        }
-
-        traversal.emplace_back(p_rootNode->value);
-
-        TreeNode* rightNode = p_rootNode->rightNode;
-
-        // explores right node
-        if (rightNode) {
-            p_rootNode = rightNode;
-            continue;
-        }
-
-        // current node has no children (leaf node) - checks for nodes to traverse on the stack
-        p_rootNode = nodesToTraverse.top();
-        nodesToTraverse.pop();
-    }
-
-    // adds final node from stack
-    if (p_rootNode != nullptr) {
-        traversal.emplace_back(p_rootNode->value);
-    }
-
+    inorderTraversal(traversal, p_rootNode);
     return traversal;
 }
 
 int main(void)
 {
-    TreeNode nodeOneThree(1);
-    TreeNode nodeOneTwo(3, &nodeOneThree, nullptr);
-    TreeNode nodeOneOne(2, &nodeOneTwo, nullptr);
+    TreeNode nodeOneThree(3);
+    TreeNode nodeOneTwo(2, &nodeOneThree, nullptr);
+    TreeNode nodeOneOne(1, nullptr, &nodeOneTwo);
 
+    // prints values of first traversal
     std::vector<int> traversalOne = inorderTraversal(&nodeOneOne);
-
-    // prints values from first inorder traversal
     for (int value : traversalOne) {
         std::cout << value << ", ";
     }
-
     std::cout << "\n";
 
+    // prints values of second traversal
     std::vector<int> traversalTwo = inorderTraversal(nullptr);
-
-    // prints values from second inorder traversal
     for (int value : traversalTwo) {
         std::cout << value << ", ";
     }
-
     std::cout << "\n";
 
-    TreeNode nodeThreeThree(1);
+    TreeNode nodeThree(1);
 
-    std::vector<int> traversalThree = inorderTraversal(&nodeThreeThree);
-
-    // prints values from second inorder traversal
+    // prints values of first traversal
+    std::vector<int> traversalThree = inorderTraversal(&nodeThree);
     for (int value : traversalThree) {
         std::cout << value << ", ";
     }
-
     std::cout << "\n";
 }
