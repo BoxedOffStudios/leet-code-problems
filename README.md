@@ -38,3 +38,4 @@
     - [Minimum Depth of Binary Tree <sup>[111]</sup>](https://leetcode.com/problems/minimum-depth-of-binary-tree)
     - [Path Sum <sup>[112]</sup>](https://leetcode.com/problems/path-sum)
     - [Binary Tree Preorder Traversal <sup>[144]</sup>](https://leetcode.com/problems/binary-tree-preorder-traversal)
+    - [Binary Tree Postorder Traversal <sup>[145]</sup>](https://leetcode.com/problems/binary-tree-postorder-traversal)
